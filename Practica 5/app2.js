@@ -12,3 +12,10 @@ emtr.on('greet', () =>{
 
 console.log("hello");
 emtr.emit('greet')
+
+emtr.on('jump', () =>{
+    console.log("someone jumped");
+});
+
+console.log(emtr)
+emtr.emit('jump');
