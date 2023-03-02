@@ -26,7 +26,7 @@ app.get('/prueba',(req,res)=>{
         </style>
     </head>
     <body>
-        <h1>HELLO WORLD, FROM PRUEBA</h1>
+        <h1>HELLO WORLD</h1>
     </body>
     </html>`)
 })
