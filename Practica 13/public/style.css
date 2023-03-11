@@ -2,3 +2,15 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+#tabla, td, th{
+    border: #c06060 1px solid;
+}
+
+th{
+    font-size: 40px;
+}
+
+td{
+    font-size: 20px;
+}
+
