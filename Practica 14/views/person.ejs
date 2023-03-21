@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <%=ID%> </h1>
+    <!-- <h2> Query string value: <%=times%> </h2> -->
+    <!-- repetición de valores -->
+   
+    <ul>
+
+            <% switch(msg){ 
+            case 'bienvenido':%>
+                <% for(let i=1; i <= times; i++) { %>
+                    <li>Bienvenido <%=ID%> </li>
+                <%}%>
+                <%break;
+                case 'adios':%>
+                <% for(let i=1; i <= times; i++) { %>
+                    <li>Adios <%=ID%> </li>
+                <%}%>
+                <%break;
+                case 'hola':%>
+                <% for(let i=1; i <= times; i++) { %>
+                    <li>Hola <%=ID%> </li>
+                <%}%>
+                <%break;
+                default: %>
+                    <li>MSG NO DISPONIBLE</h2>
+                 <%break;
+                 } %>
+     </ul>
+</body>
+</html>

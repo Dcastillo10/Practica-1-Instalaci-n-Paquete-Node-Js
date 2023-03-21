@@ -2,7 +2,7 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-#tabla, td, th{
+table, td, th{
     border: #c06060 1px solid;
 }
 
