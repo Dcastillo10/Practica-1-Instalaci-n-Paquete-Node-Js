@@ -14,4 +14,20 @@ router.get("/gente", async (req, res) => {
 });
 
 
+//routeo para addItem
+router.get("/addItem", (req,res) => {
+  res.render("addItem");
+});
+
+//mongoDb Schema
+router.post("/addItem", function(req, res){
+  const newPerson= new Person({
+      nombre: req.body.nombre,
+      edad: req.body.edad, 
+      tipoSangre: req.body.tipoSangre,
+      nss: req.body.nss
+  })
+  newPerson.save().then(() => {res.redirect("/gente")}).catch((error) => {res.json({message:error})}); 
+});
+
 module.exports = router;
