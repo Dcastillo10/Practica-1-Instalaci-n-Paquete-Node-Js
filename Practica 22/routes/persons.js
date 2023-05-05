@@ -19,6 +19,21 @@ router.get("/addItem", (req,res) => {
   res.render("addItem");
 });
 
+//routeo para editar endpoint update con metodo get
+router.get('/findById/:id', (req,res)=>{
+  Person.findById(req.params.id).then((myPerson)=>{res.render('personUpdate', {myPerson})}).catch((error)=>{res.json({message:error})});
+});
+
+//endpoint con metodo post
+router.post('/updatePerson', (req, res)=>{
+  Person.findByIdAndUpdate(req.body.objId,{
+    nombre: req.body.nombre,
+    edad: req.body.edad,
+    tipoSangre: req.body.tipoSangre,
+    nss: req.body.nss
+  })
+  .then((data)=>{res.redirect('/gente')}).catch((error)=>res.json({message:error}));
+});
 
 //mongoDb Schema
 router.post("/addItem", function(req, res){

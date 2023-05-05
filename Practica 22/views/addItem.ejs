@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar </title>
+</head>
+<body>
+    <!-- Formulario de persona -->
+    <h1>Agregar Persona</h1>
+    <!-- Es importante que el name y el id coincidan con los req (y con el schema de mongodb el tipo de dato ) -->
+    <form action="/addItem" method="post">
+        <label for="nombre" >Nombre: </label>
+        <input id="nombre" name="nombre" type="text"><br><br>
+        <label for="edad">Edad: </label>
+        <input id="edad" name="edad" type="number"><br><br>
+        <label for="tipoSangre">Tipo de Sangre: </label>
+        <input id="tipoSangre" name="tipoSangre" type="text"><br><br>
+        <label for="nss">NSS: </label>
+        <input id="nss" name="nss" type="text"><br><br>
+        
+        <input type="submit" value="SUBMIT">
+    </form>
+</body>
+</html>

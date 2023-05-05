@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Editar persona</h1>
+    <!-- Action debe coincidir con el nombre de la ruta que se coloque como endpoint en routes/persons -->
+    <form action="/updatePerson" method="post">
+        <label for="nombre" >Nombre: </label>
+        <input id="nombre" name="nombre" type="text" value="<%= `${myPerson.nombre}` %>"><br><br>
+        
+        <label for="edad">Edad: </label>
+        <input id="edad" name="edad" type="number" value="<%= `${myPerson.edad}` %>"><br><br>
+       
+        <label for="tipoSangre">Tipo de Sangre: </label>
+        <input id="tipoSangre" name="tipoSangre" type="text" value="<%= `${myPerson.tipoSangre}` %>"><br><br>
+        
+        <label for="nss">NSS: </label>
+        <input id="nss" name="nss" type="text" value="<%= `${myPerson.nss}` %>"><br><br>
+       
+        <label for="objId">ID:</label>
+        <input type="text" id="objId" name="objId" value="<%= `${myPerson._id}` %>">
+        <input type="submit" value="SUBMIT">
+    </form>
+</body>
+</html>
